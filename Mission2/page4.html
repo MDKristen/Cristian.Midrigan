@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire simple</title>
+</head>
+<body bgcolor="pink">
+
+    <table border="1" width="100%" cellpadding="10" cellspacing="0">
+        <!-- Titre : Période de stage -->
+        <tr>
+            <td colspan="2" align="center">
+                <h2>Période de stage : Du 2 Juin au 6 Juillet 2024</h2>
+            </td>
+        </tr>
+
+        <!-- Ligne des images et des tâches -->
+        <tr>
+            <!-- Logo du lycée -->
+            <td align="center">
+                <img src="image/image1.png" alt="Logo Lycée Parc de Vilgénis" width="200">
+            </td>
+            <!-- Logo BTS -->
+            <td align="center">
+                <img src="image/Image2.png" alt="Logo BTS" width="200">
+            </td>
+        </tr>
+
+        <!-- Liste des tâches -->
+        <tr>
+            <td colspan="2">
+                <ul>
+                    <li>Contacter une entreprise</li>
+                    <li>Remplir la feuille d'engagement (à télécharger de l'ENT)</li>
+                    <li>Signature du responsable Entreprise</li>
+                    <li>Signature du tuteur (Votre prof)</li>
+                    <li>Délivrance convention de stage</li>
+                </ul>
+            </td>
+    </table>
+
+    <h2>Formulaire d'inscription</h2>
+
+    <form action="#" method="POST">
+        <label for="nom">Nom :</label><br>
+        <input type="text" id="nom" name="nom" required><br><br>
+
+        <label for="prenom">Prénom :</label><br>
+        <input type="text" id="prenom" name="prenom" required><br><br>
+
+        <label for="date-naissance">Date de naissance :</label><br>
+        <input type="date" id="date-naissance" name="date-naissance" required><br><br>
+
+        <label for="adresse">Adresse postale :</label><br>
+        <textarea id="adresse" name="adresse" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="classe">Classe :</label><br>
+        <select id="classe" name="classe" required>
+            <option value="BTS1">BTS 1</option>
+            <option value="BTS2">BTS 2</option>
+            <option value="L3">L3</option>
+        </select><br><br>
+
+        <button type="submit">Valider</button>
+        <button type="reset">Annuler</button>
+    </form>
+
+</body>
+</html>
