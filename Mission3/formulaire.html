@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<h1>Formulaire d'inscription</h1>
+
+<form action="#" method="POST" enctype="multipart/form-data" id="formulaire">
+    <table border="0">
+        <tr>
+            <td><label for="pseudo">Pseudo:</label></td>
+            <td><input type="text" id="pseudo" name="pseudo" placeholder="Votre pseudo" maxlength="20" required></td>
+        </tr>
+        <tr>
+            <td><label for="password">Mot de passe:</label></td>
+            <td><input type="password" id="password" name="password" placeholder="Votre mot de passe" maxlength="20" required></td>
+        </tr>
+        <tr>
+            <td><label for="prenom">Prénom:</label></td>
+            <td><input type="text" id="prenom" name="prenom" placeholder="Votre prénom" maxlength="30"></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" id="email" name="email" placeholder="Votre email" maxlength="50"></td>
+        </tr>
+        <tr>
+            <td><label for="avatar">Avatar:</label></td>
+            <td><input type="file" id="avatar" name="avatar" accept="image/*"></td>
+        </tr>
+        <tr>
+            <td><label for="pays">Pays:</label></td>
+            <td>
+                <select id="pays" name="pays">
+                    <option value="espagne">Espagne</option>
+                    <option value="france">France</option>
+                    <option value="italie">Italie</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Fruits préférés:</td>
+            <td>
+                <input type="checkbox" id="orange" name="fruit" value="orange"> <label for="orange">Orange</label>
+                <input type="checkbox" id="fraise" name="fruit" value="fraise"> <label for="fraise">Fraise</label>
+                <input type="checkbox" id="poire" name="fruit" value="poire"> <label for="poire">Poire</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Civilité:</td>
+            <td>
+                <input type="radio" id="homme" name="civilite" value="homme"> <label for="homme">Homme</label>
+                <input type="radio" id="femme" name="civilite" value="femme"> <label for="femme">Femme</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="ville">Ville:</label></td>
+            <td><input type="text" id="ville" name="ville" placeholder="Votre ville" maxlength="50"></td>
+        </tr>
+        <tr>
+            <td><label for="code_postal">Code Postal:</label></td>
+            <td><input type="text" id="code_postal" name="code_postal" placeholder="Votre code postal" maxlength="10"></td>
+        </tr>
+        <tr>
+            <td><label for="adresse">Adresse:</label></td>
+            <td><textarea id="adresse" name="adresse" placeholder="Votre adresse" maxlength="100"></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="date_naissance">Date de naissance:</label></td>
+            <td><input type="date" id="date_naissance" name="date_naissance"></td>
+        </tr>
+        <tr>
+            <td><label for="jauge">Jauge:</label></td>
+            <td><input type="range" id="jauge" name="jauge" min="0" max="100"></td>
+        </tr>
+        <tr>
+            <td><label for="telephone">Téléphone:</label></td>
+            <td><input type="tel" id="telephone" name="telephone" placeholder="Votre numéro de téléphone" maxlength="15"></td>
+        </tr>
+        <tr>
+            <td><label for="recherche">Recherche:</label></td>
+            <td><input type="search" id="recherche" name="recherche" placeholder="Recherche"></td>
+        </tr>
+        <tr>
+            <td><label for="url">URL:</label></td>
+            <td><input type="url" id="url" name="url" placeholder="Votre site web"></td>
+        </tr>
+        <tr>
+            <td><label for="couleur">Couleur préférée:</label></td>
+            <td><input type="color" id="couleur" name="couleur"></td>
+        </tr>
+        <tr>
+            <td><label for="num_departement">Numéro Département:</label></td>
+            <td><input type="number" id="num_departement" name="num_departement" placeholder="Votre numéro de département"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Valider">
+            </td>
+        </tr>
+
+    </table>
+</form>
+<a href="index.html">
+    <button>Sommaire</button>
+</a>
+</body>
+</html>

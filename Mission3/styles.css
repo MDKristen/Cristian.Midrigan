@@ -1,0 +1,97 @@
+body {
+    text-align: center;
+    background-color: aqua;
+    
+}
+
+
+input[type="submit"]:hover {
+    background-color: #218838
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border: 15px red;
+    padding: 5px;
+    width: 200px;
+
+}
+
+ .carte {
+    background-color: #ffffff;
+    border: 2px solid #d3d3d3;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.carte:hover {
+    transform: scale(1.05);
+}
+
+.carte h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.carte h2 {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.carte p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.réseau-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.réseau-social a {
+    text-decoration: none;
+    color: #666;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.réseau-social a:hover {
+    color: #007bff;
+}
+
+.carte a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.carte a:hover {
+    color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .carte {
+        padding: 15px;
+        max-width: 90%;
+    }
+}
