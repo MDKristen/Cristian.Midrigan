@@ -1,11 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Beau Sommaire Stylisé</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .sommaire-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .sommaire-container h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .sommaire-container ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sommaire-container li {
+            margin: 15px 0;
+        }
+
+        .sommaire-container a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animation d'arrière-plan du lien */
+        .sommaire-container a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 300%;
+            height: 100%;
+            background: linear-gradient(120deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+            transition: all 0.4s ease;
+            z-index: 0;
+        }
+
+        .sommaire-container a:hover::before {
+            left: 100%;
+        }
+
+        .sommaire-container a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ffefd5;
+            border-color: #ffefd5;
+        }
+
+        .sommaire-container a span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Interaction supplémentaire - Animation à l'entrée */
+        .sommaire-container li {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s forwards;
+        }
+
+        /* Délai d'animation pour chaque élément */
+        .sommaire-container li:nth-child(1) { animation-delay: 0.1s; }
+        .sommaire-container li:nth-child(2) { animation-delay: 0.2s; }
+        .sommaire-container li:nth-child(3) { animation-delay: 0.3s; }
+        .sommaire-container li:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
-    
+
+    <div class="sommaire-container">
+        <h2>Sommaire</h2>
+        <ul>
+            <li><a href="#"><span>Accueil</span></a></li>
+            <li><a href="#"><span>À propos</span></a></li>
+            <li><a href="#"><span>Services</span></a></li>
+            <li><a href="#"><span>Contact</span></a></li>
+        </ul>
+    </div>
+
 </body>
 </html>

@@ -1,7 +1,8 @@
 body {
     text-align: center;
     background-color: aqua;
-    
+    display: flex ;
+    height: 100vh;
 }
 
 
@@ -9,10 +10,6 @@ input[type="submit"]:hover {
     background-color: #218838
 }
 
-form {
-    margin-left: auto;
-    margin-right: auto;
-}
 
 table {
     margin-left: auto;
@@ -36,6 +33,8 @@ table {
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
+    width: 100%;
+
 }
 
 .carte:hover {
@@ -94,4 +93,14 @@ table {
         padding: 15px;
         max-width: 90%;
     }
+}
+
+.home {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Formulaire {
+    margin-left: auto;
+    margin-right: auto;
 }
