@@ -6,4 +6,31 @@ body {
 .sommaire {
     margin-left: auto;
     margin-right: auto;
+    padding: 15px;
+    border-radius: 5px;
+    width: 650px;
+}
+
+.sommaire h2 {
+    text-align: center;
+}
+
+.sommaire ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sommaire li {
+    margin: 2px ;
+}
+
+.sommaire a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.sommaire a:hover {
+    color: #ff6347; 
 }
