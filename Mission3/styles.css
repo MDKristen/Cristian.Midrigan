@@ -1,8 +1,14 @@
-body {
+body{
+    text-align: center;
+    background-color: aqua;
+}
+
+.bdcarte {
     text-align: center;
     background-color: aqua;
     display: flex ;
     height: 100vh;
+    text-align: center;
 }
 
 
@@ -98,9 +104,11 @@ table {
 .home {
     margin-left: auto;
     margin-right: auto;
+    text-align: center  ;
 }
 
 .Formulaire {
     margin-left: auto;
     margin-right: auto;
+
 }
