@@ -1,0 +1,186 @@
+body {
+    background-color: lawngreen;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.cv {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    border-style: groove;
+    border-color: brown;
+    border-radius: 18px;
+    background-color: pink;
+}
+
+.entete {
+    padding: 20px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.millieu {
+    flex: 1;
+    min-width: 200px;
+}
+
+.photo {
+    position: static;
+    margin-top: 15px;
+}
+
+.photo img {
+    border-radius: 50%;
+    max-width: 128px;
+    height: auto;
+}
+
+.info, .exp, .formation {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: groove;
+    border-color: blue;
+    border-radius: 20px;
+    background-color: yellow;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.exp section, .formation-a {
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+.formation-a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.date {
+    font-weight: bold;
+    flex-basis: 30%;
+    text-align: center;
+    background-color: #f5deb3;
+    border-radius: 15px;
+    padding: 5px 10px;
+    border: 2px solid cyan;
+    margin-right: 15px;
+    min-width: 100px;
+}
+
+.ecole {
+    flex-basis: 60%;
+    text-align: center;
+}
+
+.bas {
+    padding: 20px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.retour-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.retour-btn:hover {
+    background-color: #555;
+}
+
+
+/* Styles adaptatifs */
+@media (max-width: 992px) {
+    body {
+        background-color: cadetblue;
+    }
+
+    .entete {
+        flex-direction: column;
+    }
+
+    .info, .exp, .formation {
+        margin: 10px;
+        width: auto;
+    }
+
+    .cv {
+        background-color: cadetblue;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: burlywood;
+    }
+
+    .entete {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .photo img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .exp, .formation, .info {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .cv {
+        padding: 10px;
+        background-color: burlywood;
+    }
+
+    .info, .exp {
+        font-size: 0.9rem;
+    }
+
+    .formation-a {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .date, .school {
+        flex-basis: auto;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
