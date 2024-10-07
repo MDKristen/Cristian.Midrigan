@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+    background-color: pink;
+}
+button {
+    background-color: blueviolet;
+    border-radius: 15px;
+    color: black;
+    box-shadow: 0px 0px 2px 2px blueviolet;
+    padding: 30px;
+    margin: 30px;
+    min-height: 150px; 
+    min-width: 350px;
+    font-size: 2em;
+}
+
+button:hover{
+    background-color: aqua;
+    transition: 0.3s;
+}
