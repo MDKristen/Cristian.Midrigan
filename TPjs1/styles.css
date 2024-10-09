@@ -9,7 +9,7 @@ button {
     box-shadow: 0 0 2px 2px blueviolet;
     padding: 30px;
     margin: 30px;
-    min-height: 210px;
+    min-height: 200px;
     min-width: 350px;
     font-size: 2em;
 }
