@@ -6,7 +6,7 @@ button {
     background-color: blueviolet;
     border-radius: 15px;
     color: black;
-    box-shadow: 0px 0px 2px 2px blueviolet;
+    box-shadow: 0 0 2px 2px blueviolet;
     padding: 30px;
     margin: 30px;
     min-height: 210px;
