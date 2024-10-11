@@ -1,36 +1,149 @@
-body {
-    text-align: center;
-    background-color: pink;
-}
-
-.sommaire {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px;
-    border-radius: 5px;
-    width: 650px;
-}
-
-.sommaire h2 {
-    text-align: center;
-}
-
-.sommaire ul {
-    list-style-type: none;
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.sommaire li {
-    margin: 2px ;
+body {
+    font-family: Verdana, sans-serif;
+    background: pink;
 }
 
-.sommaire a {
+.menu {
+    background-color: #333;
+    color: white;
+    border-top: 5px solid #333;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #333;
+    padding: 15px;
+    margin-left: -20px;
+}
+
+nav > ul > li {
+    position: relative;
+}
+
+nav > ul > li > a {
     text-decoration: none;
-    color: #333;
+    color: white;
     font-weight: bold;
-    transition: color 0.3s ease;
+    padding: 15px;
+    display: block;
+    border-top: 5px solid transparent;
+    transition: border-top 0.3s ease;
+    text-align: center;
 }
 
-.sommaire a:hover {
-    color: #ff6347; 
+nav > ul > li.active > a {
+    background-color: #2d5f89;
+    border-bottom: 5px solid #e44d26;
+}
+
+nav > ul > li > a:hover {
+    background-color: #555;
+    border-top: 5px solid #0a0;
+    text-decoration: none;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0a0;
+    display: none;
+    list-style: none;
+    padding: 0;
+    width: 200px;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul li {
+    width: 100%;
+}
+
+nav ul ul li a {
+    padding: 15px 20px;
+    color: white;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+nav ul ul li a:hover {
+    background-color: #0c0;
+    text-decoration: none;
+}
+
+.menu-toggle, .toggle-label {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+@media screen and (max-width: 680px) {
+    nav > ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #333;
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .toggle-label {
+        display: block;
+        padding: 5px;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        background-color: #333;
+        text-align: center;
+        border-top: 5px solid transparent;
+        transition: border-top 0.3s ease;
+    }
+
+    nav > ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    nav ul ul {
+        position: static;
+    }
+
+    nav > ul > li {
+        width: 100%;
+    }
+
+    nav > ul > li > a {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav > ul li.active > ul {
+        display: block;
+    }
+
+    nav ul li > a:active + ul,
+    nav ul li > a:focus + ul {
+        display: block;
+    }
+
+    nav input[type="checkbox"]:checked ~ ul {
+        display: flex;
+    }
 }
