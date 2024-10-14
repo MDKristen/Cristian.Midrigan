@@ -32,23 +32,26 @@ nav > ul > li {
 nav > ul > li > a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
     padding: 15px;
     display: block;
     border-top: 5px solid transparent;
     transition: border-top 0.3s ease;
     text-align: center;
+
 }
 
 nav > ul > li.active > a {
     background-color: #2d5f89;
     border-bottom: 5px solid #e44d26;
+
 }
 
 nav > ul > li > a:hover {
     background-color: #555;
     border-top: 5px solid #0a0;
     text-decoration: none;
+    font-weight: bold;
+
 }
 
 nav ul ul {
@@ -64,6 +67,7 @@ nav ul ul {
 
 nav ul li:hover > ul {
     display: block;
+
 }
 
 nav ul ul li {
@@ -82,6 +86,8 @@ nav ul ul li a {
 nav ul ul li a:hover {
     background-color: #0c0;
     text-decoration: none;
+    font-weight: bold;
+
 }
 
 .menu-toggle, .toggle-label {
@@ -107,7 +113,7 @@ nav ul ul li a:hover {
 
     .toggle-label {
         display: block;
-        padding: 5px;
+        padding: 2px;
         color: white;
         font-size: 18px;
         cursor: pointer;
@@ -115,6 +121,7 @@ nav ul ul li a:hover {
         text-align: center;
         border-top: 5px solid transparent;
         transition: border-top 0.3s ease;
+        width: 100%;
     }
 
     nav > ul {
@@ -124,6 +131,7 @@ nav ul ul li a:hover {
 
     nav ul ul {
         position: static;
+        width: 100%;
     }
 
     nav > ul > li {
