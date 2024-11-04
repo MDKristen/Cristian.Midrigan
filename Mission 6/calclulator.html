@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculatrice en JS</title>
+    <link rel="stylesheet" type="text/css" href="calc.css">
+    <script src="calcu.js"></script>
+</head>
+<body>
+<h1>TPS Calculatrice en JS</h1>
+<div>
+    <input class="t" placeholder="Premier Chiffre" type="number" name="t1" id="t1">
+    <input class="t" placeholder="Deuxieme Chiffre" type="number" name="t2" id="t2">
+</div>
+
+<div>
+    <button onclick="addition()">+</button>
+    <button onclick="substraction()">-</button>
+    <button onclick="division()">/</button>
+    <button onclick="multiplication()">X</button>
+</div>
+
+<div>
+    <button onclick="parite()">Parité</button>
+    <button onclick="permute()">Permute</button>
+</div>
+
+<div>
+    <input class="t34" placeholder="Résultat" type="text" name="t3" id="t3" readonly="readonly">
+    <input class="t34" placeholder="Pair ou Impair?" type="text" name="t4" id="t4" readonly="readonly">
+</div>
+</body>
+</html>

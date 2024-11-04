@@ -1,0 +1,57 @@
+body {
+    background-color: cyan;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+h1 {
+    margin-bottom: 20px;
+}
+table {
+    margin: 20px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+th, td {
+    padding: 10px;
+}
+th {
+    background-color: dodgerblue;
+    color: white;
+    padding: 15px;
+}
+td {
+    background-color: cornflowerblue;
+    color: white;
+    padding: 10px;
+}
+input[type="number"] {
+    width: 80px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+}
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #f0f0f0;
+}
+button:hover {
+    background-color: #ddd;
+}
+
+input {
+    text-align: center;
+    border-radius: 10px;
+    border-color: 1px solid #ccc;
+}
