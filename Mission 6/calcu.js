@@ -23,3 +23,4 @@ function parite() {
     else
         document.getElementById("t4").value = "Impair";
 }
+S

@@ -27,7 +27,7 @@ td {
     color: white;
     padding: 10px;
 }
-input[type="number"] {
+input[type="text"] {
     width: 80px;
     border-radius: 5px;
     border: 1px solid #ccc;
