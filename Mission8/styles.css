@@ -80,7 +80,6 @@ footer {
     margin-top: 20px;
 }
 
-/* Responsiveness for tablets and smaller devices */
 @media (max-width: 768px) {
     header, footer {
         padding: 10px 0;
@@ -102,7 +101,6 @@ footer {
     }
 }
 
-/* Responsiveness for phones */
 @media (max-width: 480px) {
     body {
         font-size: 14px;
