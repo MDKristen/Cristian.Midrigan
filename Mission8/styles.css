@@ -1,0 +1,135 @@
+/*Midrigan Cristian*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+main {
+    margin: 20px;
+}
+.exercise-list {
+    list-style-type: none;
+    padding: 0;
+}
+.exercise-list li {
+    background: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.exercise-list li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+.exercise-list button {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.exercise-list button:hover {
+    background-color: #0056b3;
+}
+.exercise-panel {
+    display: none;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 15px;
+    animation: slideDown 0.3s ease;
+}
+.code-description {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    overflow-x: auto;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+footer {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Responsiveness for tablets and smaller devices */
+@media (max-width: 768px) {
+    header, footer {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+    .exercise-list li {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .exercise-panel {
+        padding: 10px;
+    }
+    .exercise-list button {
+        padding: 8px;
+        font-size: 14px;
+    }
+    main {
+        margin: 15px;
+    }
+}
+
+/* Responsiveness for phones */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    header {
+        font-size: 18px;
+        padding: 15px 0;
+    }
+    main {
+        margin: 10px;
+    }
+    .exercise-list li {
+        padding: 8px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+    .exercise-list button {
+        padding: 6px;
+        font-size: 12px;
+        border-radius: 6px;
+    }
+    footer {
+        font-size: 12px;
+        padding: 8px 0;
+    }
+    .code-description {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
