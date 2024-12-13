@@ -1,351 +1,382 @@
-<!DOCTYPE html>
-<!--Midrigan Cristian-->
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercices JavaScript</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="script.js"></script>
-</head>
-<body>
-<header>
-    <h1>Exercices JavaScript</h1>
-    <p>Des pétits exercices en JavaScript </p>
-</header>
-<main>
-    <ul class="exercise-list">
-        <li>
-            <h2>Somme</h2>
-            <p>Une fonction qui prend deux nombres en entrée et retourne leur somme.</p>
-            <button onclick="togglePanel(0)">Voir la démonstration</button>
-            <div id="panel-0" class="exercise-panel">
-                <label>Nombre 1: <input id='num1' type='number'></label><br>
-                <label>Nombre 2: <input id='num2' type='number'></label><br>
-                <button onclick='calculateSum()'>Calculer</button>
-                <p>Résultat: <span id='sum-result'></span></p>
-                <div class="code-description">
-                    <strong>Code de la solution :</strong>
-                    <pre>
-function calculateSum() {
-    const num1 = parseFloat(document.getElementById('num1').value);
-    const num2 = parseFloat(document.getElementById('num2').value);
+        <!DOCTYPE html>
+        <!--Midrigan Cristian-->
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Exercices JavaScript</title>
+            <link rel="stylesheet" type="text/css" href="styles.css">
+            <script src="script.js"></script>
+        </head>
+        <body>
+        <header>
+            <h1>Exercices JavaScript</h1>
+            <p>Des pétits exercices en JavaScript </p>
+        </header>
+        <main>
+            <ul class="exercise-list">
+                <li>
+                    <h2>Somme</h2>
+                    <p>Une fonction qui prend deux nombres en entrée et retourne leur somme.</p>
+                    <button onclick="togglePanel(0)">Voir la démonstration</button>
+                    <div id="panel-0" class="exercise-panel">
+                        <label>Nombre 1: <input id='num1' type='number'></label><br>
+                        <label>Nombre 2: <input id='num2' type='number'></label><br>
+                        <button onclick='calculateSum()'>Calculer</button>
+                        <p>Résultat: <span id='sum-result'></span></p>
+                        <div class="code-description">
+                            <strong>Code de la solution :</strong>
+                            <pre>
+  function calculateSum() {
+    var num1 = parseFloat(document.getElementById('num1').value);
+    var num2 = parseFloat(document.getElementById('num2').value);
+    if (isNaN(num1) || isNaN(num2)) {
+        document.getElementById('sum-result').innerText = "Veuillez entrer deux nombres valides.";
+        return;
+    }
     document.getElementById('sum-result').innerText = num1 + num2;
-}
-                        </pre>
-                </div>
-            </div>
-        </li>
-        <li>
-            <h2>Afficher 1-10</h2>
-            <p>Une fonction qui affiche les nombres de 1 à 10.</p>
-            <button onclick="togglePanel(1)">Voir la démonstration</button>
-            <div id="panel-1" class="exercise-panel">
-                <button onclick='showNumbers()'>Afficher</button>
-                <p id='numbers'></p>
-                <div class="code-description">
-                    <strong>Code de la solution :</strong>
-                    <pre>
-function showNumbers() {
-    let output = "";
-    for (let i = 1; i <= 10; i++) {
+                                </pre>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2>Afficher 1-10</h2>
+                    <p>Une fonction qui affiche les nombres de 1 à 10.</p>
+                    <button onclick="togglePanel(1)">Voir la démonstration</button>
+                    <div id="panel-1" class="exercise-panel">
+                        <button onclick='showNumbers()'>Afficher</button>
+                        <p id='numbers'></p>
+                        <div class="code-description">
+                            <strong>Code de la solution :</strong>
+                            <pre>
+  function showNumbers() {
+    var output = "";
+    for (var i = 1; i <= 10; i++) {
         output += i + " ";
     }
     document.getElementById('numbers').innerText = output;
 }
-                        </pre>
-                </div>
-            </div>
-        </li>
-        <li>
-            <h2>Trouver le plus grand entre deux nombres</h2>
-            <p>Une fonction qui retourne le plus grand entre deux nombres.</p>
-            <button onclick="togglePanel(2)">Voir la démonstration</button>
-            <div id="panel-2" class="exercise-panel">
-                <label>Nombre 1: <input id='max-num1' type='number'></label><br>
-                <label>Nombre 2: <input id='max-num2' type='number'></label><br>
-                <button onclick='findMax()'>Trouver le plus grand</button>
-                <p>Résultat: <span id='max-result'></span></p>
-                <div class="code-description">
-                    <strong>Code de la solution :</strong>
-                    <pre>
-function findMax() {
-    const num1 = parseFloat(document.getElementById('max-num1').value);
-    const num2 = parseFloat(document.getElementById('max-num2').value);
+                                </pre>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2>Trouver le plus grand entre deux nombres</h2>
+                    <p>Une fonction qui retourne le plus grand entre deux nombres.</p>
+                    <button onclick="togglePanel(2)">Voir la démonstration</button>
+                    <div id="panel-2" class="exercise-panel">
+                        <label>Nombre 1: <input id='max-num1' type='number'></label><br>
+                        <label>Nombre 2: <input id='max-num2' type='number'></label><br>
+                        <button onclick='findMax()'>Trouver le plus grand</button>
+                        <p>Résultat: <span id='max-result'></span></p>
+                        <div class="code-description">
+                            <strong>Code de la solution :</strong>
+                            <pre>
+  function findMax() {
+    var num1 = parseFloat(document.getElementById('max-num1').value);
+    var num2 = parseFloat(document.getElementById('max-num2').value);
+    if (isNaN(num1) || isNaN(num2)) {
+        document.getElementById('max-result').innerText = "Veuillez entrer deux nombres valides.";
+        return;
+    }
     document.getElementById('max-result').innerText = num1 > num2 ? num1 : num2;
 }
-                        </pre>
-                </div>
-            </div>
-        </li>
-        <li>
-            <h2>Factorielle</h2>
-            <p>Une fonction qui calcule la factorielle d'un nombre donné.</p>
-            <button onclick="togglePanel(3)">Voir la démonstration</button>
-            <div id="panel-3" class="exercise-panel">
-                <label>Nombre: <input id='factorial-num' type='number'></label><br>
-                <button onclick='calculateFactorial()'>Calculer</button>
-                <p>Résultat: <span id='factorial-result'></span></p>
-                <div class="code-description">
-                    <strong>Code de la solution :</strong>
-                    <pre>
+                                </pre>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2>Factorielle</h2>
+                    <p>Une fonction qui calcule la factorielle d'un nombre donné.</p>
+                    <button onclick="togglePanel(3)">Voir la démonstration</button>
+                    <div id="panel-3" class="exercise-panel">
+                        <label>Nombre: <input id='factorial-num' type='number'></label><br>
+                        <button onclick='calculateFactorial()'>Calculer</button>
+                        <p>Résultat: <span id='factorial-result'></span></p>
+                        <div class="code-description">
+                            <strong>Code de la solution :</strong>
+                            <pre>
 function calculateFactorial() {
-    const num = parseInt(document.getElementById('factorial-num').value);
-    let factorial = 1;
-    for (let i = 1; i <= num; i++) {
-        factorial *= i;
+    var num = parseInt(document.getElementById('factorial-num').value);
+    if (isNaN(num) || num < 0) {
+        document.getElementById('factorial-result').innerText = "Veuillez entrer un nombre positif.";
+        return;
     }
-    document.getElementById('factorial-result').innerText = factorial;
+    var result = 1;
+    for (var i = 1; i <= num; i++) {
+        result *= i;
+    }
+    document.getElementById('factorial-result').innerText = result;
 }
-            </pre>
-                </div>
-            </div>
-        </li>
-        <li>
-            <h2>Inverser une chaîne</h2>
-            <p>Une fonction qui inverse une chaîne de caractères donnée.</p>
-            <button onclick="togglePanel(4)">Voir la démonstration</button>
-            <div id="panel-4" class="exercise-panel">
-                <label>Chaîne: <input id='reverse-string' type='text'></label><br>
-                <button onclick='reverseString()'>Inverser</button>
-                <p>Résultat: <span id='reversed-result'></span></p>
-                <div class="code-description">
-                    <strong>Code de la solution :</strong>
-                    <pre>
-function reverseString() {
-    const str = document.getElementById('reverse-string').value;
-    const reversed = str.split('').reverse().join('');
+                    </pre>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2>Inverser une chaîne</h2>
+                    <p>Une fonction qui inverse une chaîne de caractères donnée.</p>
+                    <button onclick="togglePanel(4)">Voir la démonstration</button>
+                    <div id="panel-4" class="exercise-panel">
+                        <label>Chaîne: <input id='reverse-string' type='text'></label><br>
+                        <button onclick='reverseString()'>Inverser</button>
+                        <p>Résultat: <span id='reversed-result'></span></p>
+                        <div class="code-description">
+                            <strong>Code de la solution :</strong>
+                            <pre>
+  function reverseString() {
+    var str = document.getElementById('reverse-string').value;
+    var reversed = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
     document.getElementById('reversed-result').innerText = reversed;
 }
-            </pre>
-                </div>
-            </div>
-        </li>
-        <li>
-            <h2>Pair ou Impair</h2>
-            <p>Une fonction qui vérifie si un nombre est pair ou impair.</p>
-            <button onclick="togglePanel(5)">Voir la démonstration</button>
-            <div id="panel-5" class="exercise-panel">
-                <label>Nombre: <input id='even-odd-num' type='number'></label><br>
-                <button onclick='checkEvenOdd()'>Vérifier</button>
-                <p>Résultat: <span id='even-odd-result'></span></p>
-                <div class="code-description">
-                    <strong>Code de la solution :</strong>
-                    <pre>
+                    </pre>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2>Pair ou Impair</h2>
+                    <p>Une fonction qui vérifie si un nombre est pair ou impair.</p>
+                    <button onclick="togglePanel(5)">Voir la démonstration</button>
+                    <div id="panel-5" class="exercise-panel">
+                        <label>Nombre: <input id='even-odd-num' type='number'></label><br>
+                        <button onclick='checkEvenOdd()'>Vérifier</button>
+                        <p>Résultat: <span id='even-odd-result'></span></p>
+                        <div class="code-description">
+                            <strong>Code de la solution :</strong>
+                            <pre>
 function checkEvenOdd() {
-    const num = parseInt(document.getElementById('even-odd-num').value);
-    const result = num % 2 === 0 ? "Pair" : "Impair";
-    document.getElementById('even-odd-result').innerText = result;
+    var num = parseInt(document.getElementById('even-odd-num').value);
+    if (isNaN(num)) {
+        document.getElementById('even-odd-result').innerText = "Veuillez entrer un nombre valide.";
+        return;
+    }
+    document.getElementById('even-odd-result').innerText = num % 2 === 0 ? "Pair" : "Impair";
 }
-            </pre>
-                </div>
-            </div>
-        </li>
-        <li>
-            <h2>Compter les Voyelles</h2>
-            <p>Une fonction qui compte le nombre de voyelles dans une chaîne de caractères donnée.</p>
-            <button onclick="togglePanel(6)">Voir la démonstration</button>
-            <div id="panel-6" class="exercise-panel">
-                <label>Texte: <input id='vowel-string' type='text'></label><br>
-                <button onclick='countVowels()'>Compter</button>
-                <p>Résultat: <span id='vowel-count-result'></span></p>
-                <div class="code-description">
-                    <strong>Code de la solution :</strong>
-                    <pre>
+                    </pre>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2>Compter les Voyelles</h2>
+                    <p>Une fonction qui compte le nombre de voyelles dans une chaîne de caractères donnée.</p>
+                    <button onclick="togglePanel(6)">Voir la démonstration</button>
+                    <div id="panel-6" class="exercise-panel">
+                        <label>Texte: <input id='vowel-string' type='text'></label><br>
+                        <button onclick='countVowels()'>Compter</button>
+                        <p>Résultat: <span id='vowel-count-result'></span></p>
+                        <div class="code-description">
+                            <strong>Code de la solution :</strong>
+                            <pre>
 function countVowels() {
-    const str = document.getElementById('vowel-string').value.toLowerCase();
-    const vowels = "aeiou";
-    let count = 0;
-    for (let char of str) {
-        if (vowels.includes(char)) {
+    var str = document.getElementById('vowel-string').value.toLowerCase();
+    var vowels = "aeiou";
+    var count = 0;
+    for (var i = 0; i < str.length; i++) {
+        if (vowels.indexOf(str[i]) !== -1) {
             count++;
         }
     }
     document.getElementById('vowel-count-result').innerText = count;
 }
-            </pre>
-                </div>
-            </div>
-        </li>
-        <li>
-            <h2>Moyenne</h2>
-            <p>Une fonction qui calcule la moyenne d'une liste de nombres séparés par des virgules.</p>
-            <button onclick="togglePanel(7)">Voir la démonstration</button>
-            <div id="panel-7" class="exercise-panel">
-                <label>Nombres: <input id='average-numbers' type='text' placeholder='Ex: 5,10,15'></label><br>
-                <button onclick='calculateAverage()'>Calculer</button>
-                <p>Résultat: <span id='average-result'></span></p>
-                <div class="code-description">
-                    <strong>Code de la solution :</strong>
-                    <pre>
+                    </pre>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2>Moyenne</h2>
+                    <p>Une fonction qui calcule la moyenne d'une liste de nombres séparés par des virgules.</p>
+                    <button onclick="togglePanel(7)">Voir la démonstration</button>
+                    <div id="panel-7" class="exercise-panel">
+                        <label>Nombres: <input id='average-numbers' type='text' placeholder='Ex: 5,10,15'></label><br>
+                        <button onclick='calculateAverage()'>Calculer</button>
+                        <p>Résultat: <span id='average-result'></span></p>
+                        <div class="code-description">
+                            <strong>Code de la solution :</strong>
+                            <pre>
 function calculateAverage() {
-    const numbers = document.getElementById('average-numbers').value.split(',').map(Number);
-    const sum = numbers.reduce((acc, num) => acc + num, 0);
-    const average = sum / numbers.length;
-    document.getElementById('average-result').innerText = average.toFixed(2);
-}
-            </pre>
-                </div>
-            </div>
-        </li>
-        <li>
-            <h2>Nombre Premier</h2>
-            <p>Une fonction qui vérifie si un nombre est premier.</p>
-            <button onclick="togglePanel(8)">Voir la démonstration</button>
-            <div id="panel-8" class="exercise-panel">
-                <label>Nombre: <input id='prime-number' type='number'></label><br>
-                <button onclick='isPrime()'>Vérifier</button>
-                <p>Résultat: <span id='prime-result'></span></p>
-                <div class="code-description">
-                    <strong>Code de la solution :</strong>
-                    <pre>
-function isPrime() {
-    const num = parseInt(document.getElementById('prime-number').value);
-    if (num <= 1) {
-        document.getElementById('prime-result').innerText = "Non, ce n'est pas un nombre premier.";
-        return;
-    }
-    for (let i = 2; i <= Math.sqrt(num); i++) {
-        if (num % i === 0) {
-            document.getElementById('prime-result').innerText = "Non, ce n'est pas un nombre premier.";
+    var input = document.getElementById('average-numbers').value;
+    var numbers = input.split(',');
+    var sum = 0;
+    for (var i = 0; i < numbers.length; i++) {
+        var num = parseFloat(numbers[i]);
+        if (isNaN(num)) {
+            document.getElementById('average-result').innerText = "Entrez uniquement des nombres séparés par des virgules.";
             return;
         }
+        sum += num;
     }
-    document.getElementById('prime-result').innerText = "Oui, c'est un nombre premier.";
+    var average = sum / numbers.length;
+    document.getElementById('average-result').innerText = average.toFixed(2);
 }
-            </pre>
-                </div>
-            </div>
-        </li>
-        <li>
-            <h2>Inverser un Tableau</h2>
-            <p>Une fonction qui inverse les éléments d'un tableau.</p>
-            <button onclick="togglePanel(9)">Voir la démonstration</button>
-            <div id="panel-9" class="exercise-panel">
-                <label>Tableau: <input id='array-input' type='text' placeholder='Ex: 1,2,3,4'></label><br>
-                <button onclick='reverseArray()'>Inverser</button>
-                <p>Résultat: <span id='array-result'></span></p>
-                <div class="code-description">
-                    <strong>Code de la solution :</strong>
-                    <pre>
-function reverseArray() {
-    const array = document.getElementById('array-input').value.split(',').map(Number);
-    document.getElementById('array-result').innerText = array.reverse().join(', ');
-}
-            </pre>
-                </div>
-            </div>
-        </li>
-        <li>
-            <h2>Nombre Minimum</h2>
-            <p>Une fonction qui trouve le nombre minimum dans un tableau de nombres.</p>
-            <button onclick="togglePanel(10)">Voir la démonstration</button>
-            <div id="panel-10" class="exercise-panel">
-                <label>Tableau: <input id='min-array' type='text' placeholder='Ex: 5,3,8,1'></label><br>
-                <button onclick='findMin()'>Trouver</button>
-                <p>Résultat: <span id='min-result'></span></p>
-                <div class="code-description">
-                    <strong>Code de la solution :</strong>
-                    <pre>
-function findMin() {
-    const numbers = document.getElementById('min-array').value.split(',').map(Number);
-    const min = Math.min(...numbers);
-    document.getElementById('min-result').innerText = min;
-}
-            </pre>
-                </div>
-            </div>
-        </li>
-        <li>
-            <h2>Table de Multiplication</h2>
-            <p>Une fonction qui génère une table de multiplication pour un nombre donné.</p>
-            <button onclick="togglePanel(11)">Voir la démonstration</button>
-            <div id="panel-11" class="exercise-panel">
-                <label>Nombre: <input id='multiplication-number' type='number'></label><br>
-                <button onclick='generateMultiplicationTable()'>Générer</button>
-                <p>Résultat: <pre id='multiplication-result'></pre></p>
-                <div class="code-description">
-                    <strong>Code de la solution :</strong>
-                    <pre>
-function generateMultiplicationTable() {
-    const num = parseInt(document.getElementById('multiplication-number').value);
-    let table = "";
-    for (let i = 1; i <= 10; i++) {
-        table += `${num} x ${i} = ${num * i}\n`;
+                    </pre>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2>Nombre Premier</h2>
+                    <p>Une fonction qui vérifie si un nombre est premier.</p>
+                    <button onclick="togglePanel(8)">Voir la démonstration</button>
+                    <div id="panel-8" class="exercise-panel">
+                        <label>Nombre: <input id='prime-number' type='number'></label><br>
+                        <button onclick='isPrime()'>Vérifier</button>
+                        <p>Résultat: <span id='prime-result'></span></p>
+                        <div class="code-description">
+                            <strong>Code de la solution :</strong>
+                            <pre>
+        function isPrime() {
+            const num = parseInt(document.getElementById('prime-number').value);
+            if (num <= 1) {
+                document.getElementById('prime-result').innerText = "Non, ce n'est pas un nombre premier.";
+                return;
+            }
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    document.getElementById('prime-result').innerText = "Non, ce n'est pas un nombre premier.";
+                    return;
+                }
+            }
+            document.getElementById('prime-result').innerText = "Oui, c'est un nombre premier.";
+        }
+                    </pre>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2>Inverser un Tableau</h2>
+                    <p>Une fonction qui inverse les éléments d'un tableau.</p>
+                    <button onclick="togglePanel(9)">Voir la démonstration</button>
+                    <div id="panel-9" class="exercise-panel">
+                        <label>Tableau: <input id='array-input' type='text' placeholder='Ex: 1,2,3,4'></label><br>
+                        <button onclick='reverseArray()'>Inverser</button>
+                        <p>Résultat: <span id='array-result'></span></p>
+                        <div class="code-description">
+                            <strong>Code de la solution :</strong>
+                            <pre>
+        function reverseArray() {
+            const array = document.getElementById('array-input').value.split(',').map(Number);
+            document.getElementById('array-result').innerText = array.reverse().join(', ');
+        }
+                    </pre>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2>Nombre Minimum</h2>
+                    <p>Une fonction qui trouve le nombre minimum dans un tableau de nombres.</p>
+                    <button onclick="togglePanel(10)">Voir la démonstration</button>
+                    <div id="panel-10" class="exercise-panel">
+                        <label>Tableau: <input id='min-array' type='text' placeholder='Ex: 5,3,8,1'></label><br>
+                        <button onclick='findMin()'>Trouver</button>
+                        <p>Résultat: <span id='min-result'></span></p>
+                        <div class="code-description">
+                            <strong>Code de la solution :</strong>
+                            <pre>
+        function findMin() {
+            const numbers = document.getElementById('min-array').value.split(',').map(Number);
+            const min = Math.min(...numbers);
+            document.getElementById('min-result').innerText = min;
+        }
+                    </pre>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2>Table de Multiplication</h2>
+                    <p>Une fonction qui génère une table de multiplication pour un nombre donné.</p>
+                    <button onclick="togglePanel(11)">Voir la démonstration</button>
+                    <div id="panel-11" class="exercise-panel">
+                        <label>Nombre: <input id='multiplication-number' type='number'></label><br>
+                        <button onclick='generateMultiplicationTable()'>Générer</button>
+                        <p>Résultat: <pre id='multiplication-result'></pre></p>
+                        <div class="code-description">
+                            <strong>Code de la solution :</strong>
+                            <pre>
+        function generateMultiplicationTable() {
+            const num = parseInt(document.getElementById('multiplication-number').value);
+            let table = "";
+            for (let i = 1; i <= 10; i++) {
+                table += `${num} x ${i} = ${num * i}\n`;
+            }
+            document.getElementById('multiplication-result').innerText = table;
+        }
+                    </pre>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2>Longueur d'une Chaîne</h2>
+                    <p>Une fonction qui retourne la longueur d'une chaîne de caractères.</p>
+                    <button onclick="togglePanel(12)">Voir la démonstration</button>
+                    <div id="panel-12" class="exercise-panel">
+                        <label>Chaîne: <input id='length-string' type='text' placeholder='Ex: Bonjour'></label><br>
+                        <button onclick='getStringLength()'>Trouver la longueur</button>
+                        <p>Résultat: <span id='length-result'></span></p>
+                        <div class="code-description">
+                            <strong>Code de la solution :</strong>
+                            <pre>
+        function getStringLength() {
+            const str = document.getElementById('length-string').value;
+            document.getElementById('length-result').innerText = str.length;
+        }
+                    </pre>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2>Soustraction</h2>
+                    <p>Créez une fonction qui prend deux nombres en entrée et retourne leur différence.</p>
+                    <button onclick="togglePanel(13)">Voir la démonstration</button>
+                    <div id="panel-13" class="exercise-panel">
+                        <label for="sub-num1">Nombre 1: <input id="sub-num1" type="number"></label><br>
+                        <label for="sub-num2">Nombre 2: <input id="sub-num2" type="number"></label><br>
+                        <button onclick="calculateSubtraction()">Calculer</button>
+                        <p>Résultat: <span id="sub-result"></span></p>
+                        <div class="code-description">
+                            <strong>Code de la solution :</strong>
+                            <pre>
+function calculateSubtraction() {
+    const num1 = parseFloat(document.getElementById('sub-num1').value);
+    const num2 = parseFloat(document.getElementById('sub-num2').value);
+    if (isNaN(num1) || isNaN(num2)) {
+        document.getElementById('sub-result').innerText = "Veuillez entrer deux nombres valides.";
+        return;
     }
-    document.getElementById('multiplication-result').innerText = table;
+    const result = num1 - num2;
+    document.getElementById('sub-result').innerText = result;
 }
             </pre>
-                </div>
-            </div>
-        </li>
-        <li>
-            <h2>Longueur d'une Chaîne</h2>
-            <p>Une fonction qui retourne la longueur d'une chaîne de caractères.</p>
-            <button onclick="togglePanel(12)">Voir la démonstration</button>
-            <div id="panel-12" class="exercise-panel">
-                <label>Chaîne: <input id='length-string' type='text' placeholder='Ex: Bonjour'></label><br>
-                <button onclick='getStringLength()'>Trouver la longueur</button>
-                <p>Résultat: <span id='length-result'></span></p>
-                <div class="code-description">
-                    <strong>Code de la solution :</strong>
-                    <pre>
-function getStringLength() {
-    const str = document.getElementById('length-string').value;
-    document.getElementById('length-result').innerText = str.length;
-}
-            </pre>
-                </div>
-            </div>
-        </li>
-        <li>
-            <h2>Palindrome</h2>
-            <p>Une fonction qui vérifie si un mot est un palindrome.</p>
-            <button onclick="togglePanel(13)">Voir la démonstration</button>
-            <div id="panel-13" class="exercise-panel">
-                <label>Mot: <input id='palindrome-string' type='text' placeholder='Ex: radar'></label><br>
-                <button onclick='isPalindrome()'>Vérifier</button>
-                <p>Résultat: <span id='palindrome-result'></span></p>
-                <div class="code-description">
-                    <strong>Code de la solution :</strong>
-                    <pre>
-function isPalindrome() {
-    const str = document.getElementById('palindrome-string').value.toLowerCase();
-    const reversed = str.split('').reverse().join('');
-    const result = str === reversed ? "Oui, c'est un palindrome." : "Non, ce n'est pas un palindrome.";
-    document.getElementById('palindrome-result').innerText = result;
-}
-            </pre>
-                </div>
-            </div>
-        </li>
-        <li>
-            <h2>Puissance</h2>
-            <p>Une fonction qui calcule la puissance d'un nombre.</p>
-            <button onclick="togglePanel(14)">Voir la démonstration</button>
-            <div id="panel-14" class="exercise-panel">
-                <label>Base: <input id='base-number' type='number'></label><br>
-                <label>Exposant: <input id='exponent-number' type='number'></label><br>
-                <button onclick='calculatePower()'>Calculer</button>
-                <p>Résultat: <span id='power-result'></span></p>
-                <div class="code-description">
-                    <strong>Code de la solution :</strong>
-                    <pre>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <h2>Puissance</h2>
+                    <p>Une fonction qui calcule la puissance d'un nombre.</p>
+                    <button onclick="togglePanel(14)">Voir la démonstration</button>
+                    <div id="panel-14" class="exercise-panel">
+                        <label>Base: <input id='base-number' type='number'></label><br>
+                        <label>Exposant: <input id='exponent-number' type='number'></label><br>
+                        <button onclick='calculatePower()'>Calculer</button>
+                        <p>Résultat: <span id='power-result'></span></p>
+                        <div class="code-description">
+                            <strong>Code de la solution :</strong>
+                            <pre>
 function calculatePower() {
     const base = parseFloat(document.getElementById('base-number').value);
     const exponent = parseInt(document.getElementById('exponent-number').value);
-    const result = Math.pow(base, exponent);
-    document.getElementById('power-result').innerText = result;
+    document.getElementById('power-result').innerText = Math.pow(base, exponent);
 }
-            </pre>
-                </div>
-            </div>
-        </li>
-    </ul>
-</main>
-<footer>
-    <p>Midrigan Cristian @2024</p>
-</footer>
+                    </pre>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </main>
+        <footer>
+            <p>Midrigan Cristian @2024</p>
+        </footer>
 
-</body>
-</html>
+        </body>
+        </html>

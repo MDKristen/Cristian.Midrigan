@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission 10</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+</head>
+<body>
+<div class="invoice">
+  <h1>FACTURE PDF</h1>
+  <div class="company-info">
+    <p>Nom de la compagnie : </p>
+    <p>Adresse postale : </p>
+    <p>Détails du contact : </p>
+  </div>
+  <table id="table_inv">
+    <thead>
+    <tr>
+      <th>DESCRIPTION</th>
+      <th>QUANTITÉ</th>
+      <th>PRIX UNIT.</th>
+      <th>TOTAL</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr id="modeleLigne" class="row">
+      <td><input type="text" name="desc" class="input desc" value="desc1"></td>
+      <td><input type="text" name="qte" class="input qte" value="0"></td>
+      <td><input type="text" name="prix" class="input prix" value="0"></td>
+      <td><input type="text" name="total" class="input total" readonly value="0"></td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <td colspan="3">Sous-Total</td>
+      <td><input type="text" id="sousTotal" readonly value="0"></td>
+    </tr>
+    <tr>
+      <td colspan="3">Remise (%)</td>
+      <td><input type="text" id="remise" value="0"></td>
+    </tr>
+    <tr>
+      <td colspan="3">Sous-Total moins remise</td>
+      <td><input type="text" id="sousTotalRemise" readonly value="0"></td>
+    </tr>
+    <tr>
+      <td colspan="3">Taux d'imposition (%)</td>
+      <td><input type="text" id="taxe" value="0"></td>
+    </tr>
+    <tr>
+      <td colspan="3">Taxe Totale</td>
+      <td><input type="text" id="taxeTotale" readonly value="0"></td>
+    </tr>
+    <tr>
+      <td colspan="3">Frais d'expédition</td>
+      <td><input type="text" id="expedition" value="0"></td>
+    </tr>
+    <tr>
+      <td colspan="3"><strong>Solde</strong></td>
+      <td><input type="text" id="solde" readonly value="0"></td>
+    </tr>
+    </tfoot>
+  </table>
+  <div class="buttons">
+    <button onclick="ajouterLigne()">Ajouter une ligne</button>
+    <button onclick="remplir()">Remplir automatiquement</button>
+    <button onclick="calculate()">Calculer</button>
+    <button class="cancel" onclick="effacer()">Annuler</button>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
